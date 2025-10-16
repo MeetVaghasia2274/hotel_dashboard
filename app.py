@@ -16,7 +16,7 @@ st.title("🏨 Hotel Booking Cancellation Prediction Dashboard")
 # ----------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("model/hotel_model.pkl")
+    return joblib.load("hotel_model.pkl")
 
 model = load_model()
 
@@ -57,7 +57,7 @@ st.subheader("🧾 Input Summary")
 st.dataframe(user_input)
 
 # Load encoders
-encoders = joblib.load("model/encoders.pkl")
+encoders = joblib.load("encoders.pkl")
 
 # Encode categorical inputs
 user_input["customer_type"] = encoders["customer_type"].transform([user_input["customer_type"].iloc[0]])
@@ -152,4 +152,5 @@ if st.button("Predict Cancellation"):
         
         
         
+
         
