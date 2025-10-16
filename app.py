@@ -16,7 +16,7 @@ st.title("🏨 Hotel Booking Cancellation Prediction Dashboard")
 # ----------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("hotel_model.pkl")
+    return joblib.load("hotel_test.pkl")
 
 model = load_model()
 
@@ -154,3 +154,4 @@ if st.button("Predict Cancellation"):
         
 
         
+
