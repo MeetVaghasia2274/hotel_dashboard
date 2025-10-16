@@ -97,7 +97,7 @@ if st.button("Predict Cancellation"):
     )
 
     # Waterfall plot
-    shap.initjs()
+    #shap.initjs()
     fig, ax = plt.subplots()
     shap.plots.waterfall(shap_expl, max_display=10)
     st.pyplot(fig)
@@ -154,4 +154,5 @@ if st.button("Predict Cancellation"):
         
 
         
+
 
