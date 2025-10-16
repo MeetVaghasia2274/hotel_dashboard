@@ -109,7 +109,7 @@ if st.button("Predict Cancellation"):
     "children",
     "stays_in_weekend_nights"
     ]
-    df_train = pd.read_csv("data/hotel_booking.csv")  # or preprocessed
+    df_train = pd.read_csv("hotel_booking.csv")  # or preprocessed
     df_train = df_train[feature_columns]  # only features + label
     df_current = df_train[feature_columns].sample(1, random_state=np.random.randint(0,100))
     st.subheader("Feature Drift Check (Train vs Current)")
@@ -154,5 +154,6 @@ if st.button("Predict Cancellation"):
         
 
         
+
 
 
