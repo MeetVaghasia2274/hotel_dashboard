@@ -12,9 +12,6 @@ def load_model():
 
 model = load_model()
 
-# ----------------------------
-# 🔮 Real-Time Prediction
-# ----------------------------
 st.header("🔮 Real-Time Prediction")
 st.write("Enter booking details below to predict whether the booking will be canceled.")
 
@@ -146,6 +143,7 @@ if st.button("Predict Cancellation"):
         
 
         
+
 
 
 
