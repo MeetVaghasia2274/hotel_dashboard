@@ -53,10 +53,6 @@ user_input["customer_type"] = encoders["customer_type"].transform([user_input["c
 user_input["deposit_type"] = encoders["deposit_type"].transform([user_input["deposit_type"].iloc[0]])
 user_input["market_segment"] = encoders["market_segment"].transform([user_input["market_segment"].iloc[0]])
 
-
-# ----------------------------
-# 🔍 Prediction
-# ----------------------------
 if st.button("Predict Cancellation"):
     # 1️⃣ Prediction
     pred = model.predict(user_input)[0]
@@ -67,8 +63,8 @@ if st.button("Predict Cancellation"):
     else:
         st.success(f"✅ Booking will likely NOT be canceled (Probability: {proba:.2f})")
 
-    # 2️⃣ SHAP Explanation
-    st.markdown("### 🧠 Why this prediction?")
+    # SHAP Explanation
+    st.markdown("###  Why this prediction?")
     import numpy as np
     import shap
     import matplotlib.pyplot as plt
@@ -114,12 +110,6 @@ if st.button("Predict Cancellation"):
         ax.legend()
         st.pyplot(fig)
 
-
-
-
-
-  
-
     
 
     st.subheader("🛡️ Responsible AI Checklist")
@@ -129,23 +119,5 @@ if st.button("Predict Cancellation"):
     - **Consent**: Users whose data is used for training or prediction should have provided consent.  
     - **Transparency**: SHAP plots explain why the model makes certain predictions.  
     - **Accountability**: Monitor metrics and drift regularly to ensure the model is safe and reliable.  
-    """)
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-
-        
-
-
-
-
-
+    """) 
 
