@@ -6,10 +6,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 st.set_page_config(page_title="Hotel Booking Cancellation Prediction", layout="wide")
 st.title("🏨 Hotel Booking Cancellation Prediction Dashboard")
-
-# ----------------------------
-# 📦 Load Trained Model
-# ----------------------------
 @st.cache_resource
 def load_model():
     return joblib.load("hotel_test.pkl")
@@ -150,6 +146,7 @@ if st.button("Predict Cancellation"):
         
 
         
+
 
 
 
