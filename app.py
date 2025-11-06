@@ -4,10 +4,6 @@ import joblib
 import shap
 import matplotlib.pyplot as plt
 import numpy as np
-
-# ----------------------------
-# ⚙️ Page Setup
-# ----------------------------
 st.set_page_config(page_title="Hotel Booking Cancellation Prediction", layout="wide")
 st.title("🏨 Hotel Booking Cancellation Prediction Dashboard")
 
@@ -154,6 +150,7 @@ if st.button("Predict Cancellation"):
         
 
         
+
 
 
 
